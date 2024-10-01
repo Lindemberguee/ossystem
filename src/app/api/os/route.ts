@@ -41,9 +41,9 @@ export async function POST(request: Request) {
   }
 
   // Verificar se todos os campos obrigatórios estão presentes
-  const { title, description,local, assignedUser, startTime, endTime, isRecurring } = orderData;
+  const { title, description, local, assignedUser, startTime, endTime, isRecurring } = orderData;
 
-  if (!title || !description  || !assignedUser || !startTime || !endTime) {
+  if (!title || !description || !assignedUser || !startTime || !endTime) {
     return NextResponse.json({ success: false, message: 'Campos obrigatórios não fornecidos.' }, { status: 400 });
   }
 
@@ -53,7 +53,6 @@ export async function POST(request: Request) {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
-        mode: 'no-cors',
       },
       body: JSON.stringify({
         title,
@@ -69,18 +68,13 @@ export async function POST(request: Request) {
     const responseText = await response.text();
     console.log('Resposta bruta do backend:', responseText);
 
-    if (response.headers.get('Content-Type')?.includes('application/json')) {
+    if (response.ok) {
       const data = JSON.parse(responseText);
-
-      if (response.ok) {
-        return NextResponse.json({ success: true, message: 'Ordem de Serviço criada com sucesso!', order: data });
-      } else {
-        console.error('Erro ao criar Ordem de Serviço:', data);
-        return NextResponse.json({ success: false, message: data.message || 'Erro ao criar Ordem de Serviço.' }, { status: response.status });
-      }
+      return NextResponse.json({ success: true, message: 'Ordem de Serviço criada com sucesso!', order: data });
     } else {
-      console.error('Resposta inesperada do backend:', responseText);
-      return NextResponse.json({ success: false, message: 'Erro inesperado no servidor.', rawResponse: responseText }, { status: 500 });
+      const data = JSON.parse(responseText);
+      console.error('Erro ao criar Ordem de Serviço:', data);
+      return NextResponse.json({ success: false, message: data.message || 'Erro ao criar Ordem de Serviço.' }, { status: response.status });
     }
   } catch (error) {
     console.error('Erro no processamento da requisição POST:', error);
