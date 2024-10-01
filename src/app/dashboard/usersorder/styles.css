@@ -1,0 +1,29 @@
+/* Cores para Status */
+.status-open {
+  color: blue;
+}
+.status-in_progress {
+  color: orange;
+}
+.status-completed {
+  color: green;
+}
+.status-closed {
+  color: red;
+}
+
+/* Cores para Prioridade */
+.priority-low {
+  color: green;
+}
+.priority-medium {
+  color: orange;
+}
+.priority-high {
+  color: red;
+}
+
+/* Estilização do Formulário e Tabela */
+.ant-form-item {
+  margin-bottom: 10px; /* Ajusta a margem */
+}
