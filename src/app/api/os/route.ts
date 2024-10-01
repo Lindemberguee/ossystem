@@ -16,6 +16,7 @@ export async function GET(request: Request) {
       headers: {
         Authorization: `Bearer ${token}`,
       },
+      mode: 'no-cors',
     });
 
     const data = await response.json();
