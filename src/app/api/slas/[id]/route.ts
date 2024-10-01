@@ -22,6 +22,7 @@ export async function PUT(request: Request, { params }: { params: { id: string }
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
+      mode: 'no-cors', 
       body: JSON.stringify(slaData),
     });
 
