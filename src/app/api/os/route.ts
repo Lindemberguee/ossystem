@@ -53,6 +53,7 @@ export async function POST(request: Request) {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
+        mode: 'no-cors',
       },
       body: JSON.stringify({
         title,
