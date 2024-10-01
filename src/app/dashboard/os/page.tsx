@@ -333,8 +333,8 @@ export default function OSPage() {
   
       // Define a URL e o método HTTP conforme a operação
       const url = editingOrder
-        ? `http://localhost:5000/api/os/${editingOrder._id}` // Adicionada a barra antes do ID
-        : 'http://localhost:5000/api/os';
+        ? `https://backendsistema.azurewebsites.net/api/os/${editingOrder._id}` // Adicionada a barra antes do ID
+        : 'https://backendsistema.azurewebsites.net/api/os';
       const method = editingOrder ? 'PUT' : 'POST';
   
       // Realiza a requisição para o backend

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/users'; // Endpoint correto para listar todos os usuários
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/users'; // Endpoint correto para listar todos os usuários
 
 export async function GET(request: Request) {
   try {

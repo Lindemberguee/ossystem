@@ -1,7 +1,7 @@
 // app/api/users/route.ts
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/users';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/users';
 
 export async function GET(request: Request) {
   const token = request.headers.get('Authorization')?.replace('Bearer ', '');

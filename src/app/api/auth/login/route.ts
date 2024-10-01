@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server';
 
 // URL do endpoint de login do backend local
-const BACKEND_URL = 'http://localhost:5000/api/users/login';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/users/login';
 
 export async function POST(request: Request) {
   try {

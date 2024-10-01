@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/os';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/os';
 
 // Rota para buscar ordens de serviço por ID do usuário
 export async function GET(request: Request) {

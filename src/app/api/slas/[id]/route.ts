@@ -1,7 +1,7 @@
 // app/api/slas/[id]/route.ts
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/slas';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/slas';
 
 export async function PUT(request: Request, { params }: { params: { id: string } }) {
   const token = request.headers.get('Authorization')?.replace('Bearer ', '');

@@ -2,7 +2,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/comments';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/comments';
 
 export async function DELETE(
   request: NextRequest,

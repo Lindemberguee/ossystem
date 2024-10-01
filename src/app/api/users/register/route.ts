@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server';
 
 // URL do backend para registrar usuários
-const BACKEND_URL = 'http://localhost:5000/api/users/register';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/users/register';
 
 export async function POST(request: Request) {
   try {

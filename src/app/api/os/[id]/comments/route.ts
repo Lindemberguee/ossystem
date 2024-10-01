@@ -2,7 +2,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/os';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/os';
 
 export async function GET(
   request: NextRequest,

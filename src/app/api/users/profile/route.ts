@@ -1,7 +1,7 @@
 // app/api/users/profile/route.ts
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/users/profile';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/users/profile';
 
 export async function GET(request: Request) {
   const token = request.headers.get('Authorization')?.replace('Bearer ', '');

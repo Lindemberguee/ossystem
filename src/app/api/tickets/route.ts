@@ -1,7 +1,7 @@
 // app/api/tickets/route.ts
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/tickets';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/tickets';
 
 export async function GET(request: Request) {
   const token = request.headers.get('Authorization')?.replace('Bearer ', '');

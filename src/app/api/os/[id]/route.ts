@@ -1,7 +1,7 @@
 // app/api/os/[id]/route.ts (para manipulação de uma OS específica)
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/os';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/os';
 
 export async function GET(request: Request, { params }: { params: { id: string } }) {
   const token = request.headers.get('Authorization')?.replace('Bearer ', '');

@@ -2,7 +2,7 @@
 import { NextResponse } from 'next/server';
 
 // URL do backend para manipulação de departamentos
-const BACKEND_URL = 'http://localhost:5000/api/departments';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/departments';
 
 // Função para buscar departamentos (GET)
 export async function GET(request: Request) {

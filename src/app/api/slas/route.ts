@@ -1,7 +1,7 @@
 // app/api/slas/route.ts
 import { NextResponse } from 'next/server';
 
-const BACKEND_URL = 'http://localhost:5000/api/slas';
+const BACKEND_URL = 'https://backendsistema.azurewebsites.net/api/slas';
 
 // Função para listar SLAs (GET)
 export async function GET(request: Request) {
